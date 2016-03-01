@@ -1,25 +1,24 @@
 //
-//  RegisterViewController.m
+//  HomeViewController.m
 //  NSNotificationTest
 //
 //  Created by Fancy on 16/3/1.
 //  Copyright © 2016年 Fancy. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "HomeViewController.h"
 
-@interface RegisterViewController ()
-- (IBAction)commit:(id)sender;
+@interface HomeViewController ()
+- (IBAction)done:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UITextField *textTf;
+@property (weak, nonatomic) IBOutlet UITextField *textTF;
 @end
 
-@implementation RegisterViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(change:) name:@"homeNotification" object:nil];
-
+    
     
     // Do any additional setup after loading the view.
 }
@@ -38,36 +37,23 @@
     // Pass the selected object to the new view controller.
 }
 */
-//提交数据
-- (IBAction)commit:(id)sender {
+
+- (IBAction)done:(id)sender {
     
-    if ([self.textTf.text isEqualToString:@""] ==YES) {
+    if ([self.textTF.text isEqualToString:@""] ==YES) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"请输入数据" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action  = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:action];
         
         [self presentViewController:alert animated:YES completion:nil];
-    }
-    else{
-    NSDictionary *dic = [NSDictionary dictionaryWithObject:self.textTf.text forKey:@"content"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dic];
-    [self.navigationController popViewControllerAnimated:YES];
-    }
-}
 
-- (void)change:(NSNotification *)notification
-{
-    NSDictionary *dic = [notification userInfo];
-    NSString *content = [dic  objectForKey:@"content"];
-    NSLog(@"注册中的content= %@",content);
-    //将通知过来的数据传递给textTF
-    self.textTf.text = content;
-    self.textTf.textAlignment = NSTextAlignmentCenter;
+    }
+    else
+    {
+        NSDictionary *dict = [NSDictionary dictionaryWithObject:self.textTF.text forKey:@"content"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"homeNotification" object:nil userInfo:dict];
+        [self.navigationController popViewControllerAnimated:YES];
     
-
-
-
-
-
+    }
 }
 @end

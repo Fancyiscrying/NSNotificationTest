@@ -23,7 +23,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="注册页"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="178" y="526" width="45" height="30"/>
+                                    <rect key="frame" x="177" y="421" width="45" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="unU-OQ-qi9" kind="push" id="d5w-dJ-dJu"/>
@@ -39,6 +39,19 @@
                                     <rect key="frame" x="44" y="168" width="312" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L56-Le-Lv3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="HOME页"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="492" width="59" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="r4p-jh-aLU" kind="push" id="qzA-bf-6f7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,12 +59,14 @@
                             <mask key="subviews">
                                 <exclude reference="xsv-az-tRU"/>
                                 <exclude reference="55L-5z-f8i"/>
+                                <exclude reference="L56-Le-Lv3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="xsv-az-tRU"/>
                                 <include reference="55L-5z-f8i"/>
+                                <include reference="L56-Le-Lv3"/>
                             </mask>
                         </variation>
                     </view>
@@ -125,6 +140,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeB-TO-QhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1924.5" y="369"/>
+        </scene>
+        <!--HOME页-->
+        <scene sceneID="yEj-jB-Gzc">
+            <objects>
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r4p-jh-aLU" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1fD-9L-V11"/>
+                        <viewControllerLayoutGuide type="bottom" id="szh-CW-W9h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CDm-17-bJ5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZB-4a-87N">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="179" width="241" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="iZB-4a-87N"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="iZB-4a-87N"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME页" id="KlH-ZA-WMy">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="SrP-SX-vuo">
+                            <connections>
+                                <action selector="done:" destination="r4p-jh-aLU" id="fCa-jy-npK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textTF" destination="iZB-4a-87N" id="1us-kS-uMD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bh5-wt-62H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="1163"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qeH-4r-zaA">

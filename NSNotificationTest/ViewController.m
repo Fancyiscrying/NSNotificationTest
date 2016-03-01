@@ -17,8 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //注册通知
+    //接收注册页的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerCompletion:) name:@"RegisterCompletionNotification" object:nil];
+    
+    //接收home页的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(change:) name:@"homeNotification" object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -40,6 +43,18 @@
 
 }
 
+- (void)change:(NSNotification *)notification
+{
+    NSDictionary *dic = [notification userInfo];
+    NSString *content = [dic  objectForKey:@"content"];
+    NSLog(@"content= %@",content);
+    //将通知过来的数据传递给textTF
+    self.textTF.text = content;
+    self.textTF.textAlignment = NSTextAlignmentCenter;
+    
 
+
+
+}
 
 @end
