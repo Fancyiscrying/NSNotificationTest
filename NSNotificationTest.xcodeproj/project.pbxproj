@@ -13,6 +13,7 @@
 		B1C91D301C853DED00CD503A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C91D2E1C853DED00CD503A /* Main.storyboard */; };
 		B1C91D321C853DED00CD503A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C91D311C853DED00CD503A /* Assets.xcassets */; };
 		B1C91D351C853DED00CD503A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C91D331C853DED00CD503A /* LaunchScreen.storyboard */; };
+		B1C91D3E1C853F3600CD503A /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C91D3D1C853F3600CD503A /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		B1C91D311C853DED00CD503A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1C91D341C853DED00CD503A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1C91D361C853DED00CD503A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C91D3C1C853F3600CD503A /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		B1C91D3D1C853F3600CD503A /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				B1C91D291C853DED00CD503A /* AppDelegate.m */,
 				B1C91D2B1C853DED00CD503A /* ViewController.h */,
 				B1C91D2C1C853DED00CD503A /* ViewController.m */,
+				B1C91D3C1C853F3600CD503A /* RegisterViewController.h */,
+				B1C91D3D1C853F3600CD503A /* RegisterViewController.m */,
 				B1C91D2E1C853DED00CD503A /* Main.storyboard */,
 				B1C91D311C853DED00CD503A /* Assets.xcassets */,
 				B1C91D331C853DED00CD503A /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 				B1C91D2D1C853DED00CD503A /* ViewController.m in Sources */,
 				B1C91D2A1C853DED00CD503A /* AppDelegate.m in Sources */,
 				B1C91D271C853DED00CD503A /* main.m in Sources */,
+				B1C91D3E1C853F3600CD503A /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
